@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :type_id %>
-    <%= form.text_field :type_id, id: :contact_type_id %>
+    <%= collection_select(:contact, :type_id, @types_for_select, :id, :description, prompt: "Selecione o tipo") %>
   </div>
 
   <div class="field">

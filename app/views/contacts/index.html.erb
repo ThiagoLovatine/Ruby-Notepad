@@ -29,5 +29,6 @@
 </table>
 
 <br>
-
+<% abc = "ABC" %>
 <%= link_to 'New Contact', new_contact_path %>
+<%= render partial: "/contacts/shared/teste", locals: { xyz: abc} %>

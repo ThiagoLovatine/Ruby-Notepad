@@ -1,24 +1,7 @@
-# README
+# Notepad - A Simple contact list
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I Wrote this contact list as part of my learning from Ruby development
 
-Things you may want to cover:
+Test list:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Example of list item

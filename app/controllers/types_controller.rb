@@ -4,6 +4,7 @@ class TypesController < ApplicationController
   # GET /types
   # GET /types.json
   def index
+    @meu_nome = "Thiago Lovatine"
     @types = Type.all
   end
 

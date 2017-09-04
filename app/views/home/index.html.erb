@@ -1,9 +1,7 @@
-<h1>Seja bem-vindo!</h1>
+<h1><%= show_welcome_message %></h1>
 <ul>
-    <li>
-        <a href="/types">Tipos</a>
-        <a href="/contacts">Contatos</a>
-        <a href="/addresses">Endereços</a>
-        <a href="/phones">Telephones</a>
-    </li>
+    <li><%= link_to "Tipos", types_path %></li>
+    <li><%= link_to "Contatos", contacts_path %></li>
+    <li><%= link_to "Endereços", addresses_path %></li>
+    <li><%= link_to "Telefones", phones_path %></li>
 </ul>

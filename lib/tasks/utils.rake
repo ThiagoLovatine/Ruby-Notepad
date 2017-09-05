@@ -14,31 +14,27 @@ namespace :utils do
       end
     puts "Seeding |Contact| [END]"
 
+
     puts "Seeding |Address| [BEGIN]"
-    contacts = Contact.all
-
-    contacts.each do |x|  
-
+    Contact.all.each do |x|  
       Address.create!(
         street: Faker::Address.street_name,
         city: Faker::Address.city,
         state: Faker::Address.state_abbr,
         contact: x
       )
-
     end
     puts "Seeding |Address| [END]"
 
+
     puts "Seeding |Phone| [BEGIN]"
-    contacts = Contact.all
-
-    contacts.each do |x|  
-
-      Phone.create!(
-        phone: Faker::PhoneNumber.phone_number,
-        contact: x
-      )
-
+    Contact.all.each do |x|  
+      Random.rand(1..5).times do
+        Phone.create!(
+          phone: Faker::PhoneNumber.phone_number,
+          contact: x
+        )
+      end
     end
     puts "Seeding |Phone| [END]"
 

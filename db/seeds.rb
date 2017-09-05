@@ -16,14 +16,3 @@ Type.create!([
 ])
 puts "Seeding |Type| [END]"
 
-puts "Seeding |Contact| [BEGIN]"
-50.times do |i|
-    Contact.create!(
-        name: Faker::Name.name,
-        email: Faker::Internet.unique.email,
-        type: Type.all.sample,
-        rmk: Faker::Lorem.sentence(3)
-    )
-end
-puts "Seeding |Contact| [END]"
-

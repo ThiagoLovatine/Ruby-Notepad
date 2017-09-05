@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+
+puts "Seeding |Type| [BEGIN]"
+Type.create!([
+    { description: 'Amigos' },
+    { description: 'Conhecidos' },
+    { description: 'Comércio' }
+])
+puts "Seeding |Type| [END]"
+
+puts "Seeding |Contact| [BEGIN]"
+50.times do |i|
+    Contact.create!(
+        name: Faker::Name.name,
+        email: Faker::Internet.unique.email,
+        type: Type.all.sample,
+        rmk: Faker::Lorem.sentence(3)
+    )
+end
+puts "Seeding |Contact| [END]"
+
